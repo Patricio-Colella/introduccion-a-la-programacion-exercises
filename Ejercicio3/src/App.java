@@ -7,22 +7,22 @@ public class App {
         int edad = Integer.parseInt(sc.nextLine());
         System.out.print("ingrese su nombre: ");
         String nombre = sc.nextLine();
-        System.out.print("ingrese su correo: ");
-        String correo = sc.nextLine();
+        System.out.print("ingrese su telefono: ");
+        String telefono = sc.nextLine();
         Persona user = new Persona();
         user.setEdad(edad);
         user.setNombre(nombre);
-        user.setCorreo(correo);
+        user.setTelefono(telefono);
         System.out.println("nombre: "+user.getNombre());
         System.out.println("edad: "+user.getEdad());
-        System.out.println("correo: "+user.getCorreo());
+        System.out.println("telefono: "+user.getTelefono());
         sc.close();
     }
 
     static class Persona {
         private int edad;
         private String nombre;
-        private String correo;
+        private String telefono;
         
         public void setEdad(int edad){
             this.edad=edad;
@@ -36,11 +36,11 @@ public class App {
         public String getNombre(){
             return this.nombre;
         }
-        public void setCorreo(String correo){
-            this.correo=correo;
+        public void setTelefono(String telefono){
+            this.telefono=telefono;
         }
-        public String getCorreo(){
-            return this.correo;
+        public String getTelefono(){
+            return this.telefono;
         }
         
     }
